@@ -1,0 +1,473 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #e3f2fd; /* Light blue background */
+}
+
+/* Header Styling */
+header {
+    padding: 10px 0;
+    text-align: right;
+    background-color: #0d47a1; /* Dark blue header background */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+}
+
+.logo-box {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers items horizontally in the container */
+    align-items: center; /* Centers items vertically in the container */
+    background-color: #bbdefb; /* Very light blue box background */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 20px;
+    border: 2px solid #0d0e0f; /* Light gray border */
+    width: 150px; /* Adjust width as needed */
+    margin-left: 20px; /* Centers the box horizontally in the parent element */
+    margin-bottom: 30px;
+}
+
+.logo {
+    height: 100px;
+    width: 120px;
+}
+
+
+/* Navbar Styling */
+.navbar {
+
+    text-align: right;
+    flex-wrap: wrap; /* Wraps navbar on smaller screens */
+}
+
+.navbar a {
+    font-size: 18px;
+    color:#bbdefb; /* White text for contrast */
+    text-align: center;
+    padding: 10px 20px;
+    text-shadow:
+        -1px -1px 0 #000,
+        .75px -1px 0 #000,
+        -1px .75px 0 #000,
+        .75px .75px 0 #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #1565c0; /* Lighter blue for hover */
+    color: white;
+    border-radius: 7px;
+}
+
+ul a:hover {
+    background-color: #1976d2; /* Another blue hover color */
+    border-radius: 7px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main Section */
+main {
+    padding: 50px;
+}
+
+/* Footer Styling */
+footer {
+    background: #0d47a1; /* Dark blue footer background */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Stack items in footer for smaller screens */
+}
+.footer p{
+    text-align: center;
+}
+.footer-container a{
+    color: #0d47a1;;
+    text-decoration: none;
+}
+.footer-container a:hover {
+    color: white;
+    border-radius: 7px; /* Optional: changes color when hovered */
+}
+
+/* Hero Section Styles */
+.hero {
+    margin-bottom: 20px;
+    height: auto;
+    max-width: 90%;
+    margin: 0 auto 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #bbdefb; /* Light blue background for hero section */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row; /* Stack content vertically on small screens */
+    align-items: left;
+    justify-content: space-between;
+}
+
+.hero-content {
+    max-width: 100%;
+    margin-top: 10px;
+    text-align: left; /* Center align the content for mobile */
+}
+
+.hero h2 {
+    margin-bottom: 20px;
+    font-size: 2.1rem;
+    color: #0d47a1; /* Dark blue for titles */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #1565c0; /* Medium blue for text */
+}
+
+.hero .btn {
+    display: inline-block;
+    background: #0d47a1; /* Dark blue button */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.hero .btn:hover {
+    background: #1565c0; /* Lighter blue on hover */
+}
+
+.hero img {
+    padding-top: 10;
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    
+}
+.hero-list{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.hero-box{
+    background-color: #f3f5f9; /* Very light blue box background */
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #d1d5db; /* Light gray border */
+    width: 180px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Contact Section */
+#contact {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background-color: #e3f2fd; /* Very light blue background */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    text-align: center;
+    color: #0d47a1; /* Dark blue text */
+    margin-bottom: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #0d47a1; /* Dark blue labels */
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#contact button[type="submit"] {
+    padding: 10px 15px;
+    border: none;
+    background-color: #1976d2; /* Medium blue button */
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button[type="submit"]:hover {
+    background-color: #0d47a1; /* Dark blue on hover */
+}
+
+#contact input[type="text"]:focus,
+#contact input[type="email"]:focus,
+#contact textarea:focus {
+    border-color: #0d47a1; /* Dark blue focus */
+    outline: none;
+}
+
+/* Section Styling */
+section {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    text-align: center;
+    color: #0d47a1; /* Dark blue section titles */
+    margin-bottom: 20px;
+}
+section p{
+    color: #0d47a1;
+}
+
+/* Toaster Styling */
+.toaster {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #1976d2; /* Medium blue for toaster */
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+.toaster.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from { bottom: 0; opacity: 0; }
+    to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { bottom: 30px; opacity: 1; }
+    to { bottom: 0; opacity: 0; }
+}
+
+/* About Us Section */
+.about-us {
+    margin-bottom: 20px;
+    height: auto;
+    max-width: 90%;
+    margin: 0 auto 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically on small screens */
+    justify-content: center;
+    align-items: center;
+    background-color: #bbdefb; /* Light blue background */
+}
+
+.content {
+    max-width: 100%;
+    margin-right: 0;
+    text-align: center; /* Center align for small screens */
+}
+
+.content h2 {
+    font-size: 14px;
+    color: #0d47a1; /* Dark blue for small headings */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.content h1 {
+    font-size: 36px;
+    color: #0d47a1; /* Dark blue for main heading */
+    margin: 10px 0;
+}
+
+.content p {
+    font-size: 16px;
+    color: #1565c0; /* Medium blue for text */
+    line-height: 1.5;
+}
+
+button {
+    background-color: #0d47a1; /* Dark blue button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1565c0;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #contact {
+        padding: 15px;
+    }
+
+    .about-us {
+        flex-direction: column;
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#login-form input,
+#login-form button {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#login-form button {
+    background-color: #1e90ff; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    background-color: #4682b4; /* Darker blue on hover */
+}
+
+#login-error {
+    margin-top: 10px;
+}

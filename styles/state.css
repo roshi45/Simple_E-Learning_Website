@@ -1,0 +1,98 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e3f2fd;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #0d47a1;
+}
+
+h3 {
+    color: #0d47a1;
+}
+
+/* Course Box Styling */
+.course {
+    background-color: #bbdefb;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    color: #333;
+}
+
+/* Button Styling */
+a.explore-btn {
+    display: inline-block;
+    background-color: #1976d2;
+    color: white;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+a.explore-btn:hover {
+    background-color: #0d47a1;
+}
+
+/* Syllabus Link */
+.syllabus {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.syllabus a {
+    font-size: 1.5em;
+    color: #0d47a1;
+    text-decoration: none;
+}
+
+.syllabus a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .course {
+        padding: 10px;
+    }
+
+    a.explore-btn {
+        width: 100%; /* Full width buttons on small screens */
+        margin-bottom: 10px;
+    }
+
+    .syllabus a {
+        font-size: 1.2em;
+    }
+}

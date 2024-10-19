@@ -1,0 +1,247 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #e3f2fd; /* Light blue background */
+}
+
+/* Header Styling */
+header {
+    padding: 10px 0;
+    text-align: right;
+    background-color: #0d47a1; /* Dark blue header background */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+}
+
+.logo-box {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers items horizontally in the container */
+    align-items: center; /* Centers items vertically in the container */
+    background-color: #bbdefb; /* Very light blue box background */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 20px;
+    border: 2px solid #0d0e0f; /* Light gray border */
+    width: 150px; /* Adjust width as needed */
+    margin-left: 20px; /* Centers the box horizontally in the parent element */
+    margin-bottom: 30px;
+}
+
+.logo {
+    height: 100px;
+    width: 120px;
+}
+
+/* Navbar Styling */
+.navbar {
+    text-align: right;
+    flex-wrap: wrap; /* Wraps navbar on smaller screens */
+}
+
+.navbar a {
+    font-size: 18px;
+    color:#bbdefb; /* White text for contrast */
+    text-align: center;
+    padding: 10px 20px;
+    text-shadow:
+        -1px -1px 0 #000,
+        .75px -1px 0 #000,
+        -1px .75px 0 #000,
+        .75px .75px 0 #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+.navbar a:hover {
+    background-color: #1565c0; /* Lighter blue for hover */
+    color: white;
+    border-radius: 7px;
+}
+
+ul a:hover {
+    background-color: #1976d2; /* Another blue hover color */
+    border-radius: 7px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 50px;
+}
+
+/* Courses Section */
+.courses-section {
+    color: #2563eb;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #e3f2fd; /* Bright blue background */
+}
+
+.faculty-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #2563eb; /* Light blue underline */
+    display: inline-block;
+}
+
+/* Course List Styling */
+.course-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Wraps courses on small screens */
+}
+
+/* Course Box Styling */
+.course-box {
+    background-color: #93c5fd; /* Very light blue box background */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db; /* Light gray border */
+    width: 180px;
+    text-align: center;
+    margin-bottom: 20px; /* Add margin for spacing on small screens */
+}
+
+.course-box-im img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.course-box-na h3 {
+    font-size: 18px;
+    color: #3b82f6; /* Light blue text */
+}
+.course-box-na a{
+    color: #0d47a1;;
+    text-decoration: none;
+}
+
+.course-box {
+    font-size: 18px;
+    color: #3b82f6; /* Light blue text */
+}
+
+/* Footer Styling */
+/* Footer Styling */
+footer {
+    background: #3f85ed; /* Dark blue footer background */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Stack items in footer for smaller screens */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.footer-logo,
+.footer-links,
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Add margin for spacing on small screens */
+}
+
+.footer-logo img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links ul li a {
+    color: #93c5fd; /* Light blue links */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-social a {
+    margin-bottom: 10px;
+    color: #93c5fd; /* Light blue social links */
+}
+
+.footer-social img {
+    width: 24px;
+    margin-right: 8px;
+}
+
+/* Responsive Media Queries for Mobile and Tablets */
+@media only screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center; /* Center align the links */
+    }
+
+    .auth-buttons {
+        flex-direction: column; /* Stack login and signup buttons */
+        width: 100%; /* Make them take full width on small screens */
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .auth-buttons .login,
+    .auth-buttons .signup {
+        width: 100%; /* Full-width buttons on mobile */
+    }
+
+    .courses-section {
+        padding: 20px 10px; /* Reduce padding on smaller screens */
+    }
+
+    .course-list {
+        flex-direction: column; /* Stack courses vertically */
+        gap: 20px;
+    }
+
+    footer {
+        flex-direction: column; /* Stack footer items vertically */
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

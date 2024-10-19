@@ -1,0 +1,51 @@
+/* rbi.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e3f2fd; /* Light blue background */
+    color: #0d47a1; /* Dark blue text color */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for content */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #01579b; /* Primary blue */
+    border-bottom: 2px solid #0d47a1; /* Dark blue underline */
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #0288d1; /* Lighter blue */
+}
+
+a {
+    display: block;
+    margin: 10px 0;
+    color: #0288d1; /* Lighter blue for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #01579b; /* Darker blue on hover */
+}
+
+.back-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #0288d1;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: #01579b;
+}
