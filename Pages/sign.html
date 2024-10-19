@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="../styles/sign.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Signup</h1>
+        <form id="signup-form" method="POST">
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="exam">Select Exam</label>
+                <select id="exam" name="exam" required>
+                    <option value="rbi">RBI</option>
+                    <option value="upsc">UPSC</option>
+                    <option value="cat">CAT</option>
+                    <option value="sat">SAT</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="captcha">Captcha: <span id="captcha-code"></span></label>
+                <input type="text" id="captcha" name="captcha" required>
+                <button type="button" class="refresh-captcha" id="refresh-captcha">Refresh Captcha</button>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <a href="login.html">Already have an account</a>
+    </div>
+
+    <!-- Include the script at the end to ensure all elements are loaded -->
+    <script>
+        // Define the generateCaptcha function
+        function generateCaptcha() {
+            const captchaCode = Math.random().toString(36).substring(2, 8).toUpperCase();
+            document.getElementById("captcha-code").innerText = captchaCode;
+        }
+
+        // Generate captcha when the page loads
+        window.onload = generateCaptcha;
+
+        // Attach click event to the Refresh Captcha button
+        document.getElementById("refresh-captcha").addEventListener('click', generateCaptcha);
+
+        // Form submission event listener
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            const formData = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                password: document.getElementById("password").value,
+                exam: document.getElementById("exam").value,
+                captcha: document.getElementById("captcha").value
+            };
+
+            fetch('http://localhost:3000/signup', { // URL of your server
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message || data.error);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            });
+        });
+    </script>
+</body>
+</html>
